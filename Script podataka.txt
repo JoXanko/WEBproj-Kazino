@@ -1,0 +1,89 @@
+INSERT INTO Kazino VALUES ('Wow Kazino','Srbija','Beograd',2012);
+INSERT INTO Kazino VALUES ('Extra kazino','Rusija','Moskva',1986);
+INSERT INTO Kazino VALUES ('Cool kazino','Nemacka','Berlin',2003);
+
+INSERT INTO Osoba VALUES (6512453245985,'Milan','Petkovic','Muski',34);
+INSERT INTO Osoba VALUES (2356451298564,'Danica','Cvetkovic','Zenski',24);
+INSERT INTO Osoba VALUES (4163529685741,'Petar','Stojic','Muski',28);
+INSERT INTO Osoba VALUES (4196746352418,'Tijana','Cojic','Zenski',42);
+INSERT INTO Osoba VALUES (1346152524255,'Petra','Stanic','Zenski',26);
+
+INSERT INTO Pice VALUES ('Cosmopolitan',1,7);
+INSERT INTO Pice VALUES ('Martini',1,9);
+INSERT INTO Pice VALUES ('Coca-Cola',0,0);
+INSERT INTO Pice VALUES ('Cuba libre',1,10);
+INSERT INTO Pice VALUES ('Mohito',1,5);
+INSERT INTO Pice VALUES ('Fanta',0,0);
+INSERT INTO Pice VALUES ('Breskva',0,0);
+INSERT INTO Pice VALUES ('Margarita',1,2);
+
+INSERT INTO Igra VALUES ('Poker',7,'Svaki igrac dobija po 5 karata i pobedjuje onaj sa najjacim u odnosu na ponudjene na stolu');
+INSERT INTO Igra VALUES ('Black jack',5,'Ko prvi skupi 21 pobedjuje partiju');
+INSERT INTO Igra VALUES ('Roulette',12,'Kladite se na jedan broj ili boju ili vise njih i osvajate onoliko gde je kuglica stala');
+INSERT INTO Igra VALUES ('3 Card Poker',7,'Slicno pokeru igra se sa tri karte');
+INSERT INTO Igra VALUES ('Texas hold em',6,'Vrsta pokera');
+INSERT INTO Igra VALUES ('Baccarat',5,'Postoji igrac i bankar..');
+INSERT INTO Igra VALUES ('Craps',10,'Slicno ruletu');
+
+INSERT INTO Dealer VALUES (5263415241587,'Milica','Janic','Zenski',27,3,450,1);
+INSERT INTO Dealer VALUES (1346562945122,'Darija','Stevic','Zenski',37,10,650,1);
+INSERT INTO Dealer VALUES (9764316265385,'Petar','Dinic','Muski',31,6,350,1);
+INSERT INTO Dealer VALUES (9134675451625,'Igor','Stankovic','Muski',41,16,700,2);
+INSERT INTO Dealer VALUES (3332152415241,'Nikola','Janic','Muski',27,4,350,2);
+INSERT INTO Dealer VALUES (7784461355623,'Tara','Igic','Zenski',42,20,650,3);
+
+INSERT INTO IgreUKazinu VALUES (100,1,1);
+INSERT INTO IgreUKazinu VALUES (50,1,2);
+INSERT INTO IgreUKazinu VALUES (60,1,6);
+INSERT INTO IgreUKazinu VALUES (25,1,3);
+INSERT INTO IgreUKazinu VALUES (100,2,4);
+INSERT INTO IgreUKazinu VALUES (80,2,7);
+INSERT INTO IgreUKazinu VALUES (60,2,3);
+INSERT INTO IgreUKazinu VALUES (100,2,2);
+INSERT INTO IgreUKazinu VALUES (100,3,1);
+INSERT INTO IgreUKazinu VALUES (30,3,3);
+INSERT INTO IgreUKazinu VALUES (75,3,6);
+
+INSERT INTO KazinoOsoba VALUES (1000,2000,1,1);
+INSERT INTO KazinoOsoba VALUES (2000,4000,3,1);
+INSERT INTO KazinoOsoba VALUES (1500,6000,5,1);
+INSERT INTO KazinoOsoba VALUES (4000,2000,4,1);
+INSERT INTO KazinoOsoba VALUES (500,8000,2,1);
+INSERT INTO KazinoOsoba VALUES (2000,2500,1,2);
+INSERT INTO KazinoOsoba VALUES (9000,1000,3,2);
+INSERT INTO KazinoOsoba VALUES (2800,6000,5,2);
+INSERT INTO KazinoOsoba VALUES (2500,4000,3,3);
+INSERT INTO KazinoOsoba VALUES (3500,2000,5,3);
+
+INSERT INTO PicaUKazinu VALUES (400,1,1);
+INSERT INTO PicaUKazinu VALUES (150,1,3);
+INSERT INTO PicaUKazinu VALUES (600,1,5);
+INSERT INTO PicaUKazinu VALUES (350,1,7);
+INSERT INTO PicaUKazinu VALUES (130,1,6);
+INSERT INTO PicaUKazinu VALUES (350,2,1);
+INSERT INTO PicaUKazinu VALUES (600,2,4);
+INSERT INTO PicaUKazinu VALUES (160,2,3);
+INSERT INTO PicaUKazinu VALUES (450,2,2);
+INSERT INTO PicaUKazinu VALUES (360,2,8);
+INSERT INTO PicaUKazinu VALUES (520,3,4);
+INSERT INTO PicaUKazinu VALUES (120,3,6);
+INSERT INTO PicaUKazinu VALUES (400,3,7);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
