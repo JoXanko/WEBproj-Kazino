@@ -68,22 +68,3 @@ INSERT INTO PicaUKazinu VALUES (360,2,8);
 INSERT INTO PicaUKazinu VALUES (520,3,4);
 INSERT INTO PicaUKazinu VALUES (120,3,6);
 INSERT INTO PicaUKazinu VALUES (400,3,7);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
