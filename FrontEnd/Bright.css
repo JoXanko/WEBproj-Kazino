@@ -1,0 +1,171 @@
+.kazinoForm{
+    display:flex;
+}
+.prikazKazina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.prikazTabela{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+table{
+    margin-right:15px;
+    margin-left:15px;
+}
+.hRadnici{
+    align-self: center;
+}
+.hRadnik{
+    align-self: center ;
+    margin-top: 15px ; 
+}
+.tdDesno,.trCipovi{
+    border-style:solid;
+    border-color:rgb(180, 180, 180);
+    border-width:0.3px;    
+    min-width: 130px;
+    text-align: center;
+}
+.trLevo{
+    border-bottom:dotted rgb(180, 180, 180) 0.3px;
+}
+.stub{
+    width: 80%;  
+}
+.grafik{
+    display: flex;
+    flex-direction: column-reverse;
+    border: rgb(190, 190, 190) solid 0.3px;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+.stubici{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    height: 350px;    
+}
+.divNaslov{
+    border-radius: 15px;
+    padding :15px;
+    display: flex;
+    flex-direction: column;
+}
+.izborKazina{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+select{
+    height: 40px;
+}
+.labelaRadButton{
+    margin-right:15px;
+}
+.GlavniKontejner{
+    padding:10px;
+}
+.btn{
+    margin:10px;
+}
+.hKazina{
+    margin: 10px;
+}
+.cipovi{
+    width: 100px;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top:10px;
+    position:relative;
+    left:4px;
+}
+.redPica,.redIgra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.labNaziv,.labDrzava,.labGrad,.labGodOsnivanja{
+    font-size: 17px;
+    text-align: center;
+}/*maybe?*/
+.naziv,.drzava,.grad,.godinaOsnivanja{
+    font-size: 17px;
+    text-align: center;
+}/*maybe?*/
+.kontrola{
+    width: 75%;
+    margin: auto;
+}
+.redPica,.redIgra{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.divRedNaziv,.divRedDrzava,.divRedGrad,.divRedGod{    
+    font-size: 17px;
+    display: flex;
+    justify-content:space-between;
+    flex-grow: 1;
+    border-bottom: dotted rgb(180, 180, 180) 0.3px;
+    margin-left:25px;
+    margin-right: 25px;
+}
+.labNazivConst,.labDrzavaConst,.labGradConst,.labGodConst{
+    margin-right:15px;
+}
+.labelaRadButton{
+    margin:10px;
+}
+.divRedJMBG,.divRedIme,.divRedPrezime,.divRedPol,.divRedGodine,.divRedPlata{
+    font-size: 17px;
+    display: flex;
+    justify-content:space-between;
+    flex-grow: 1;
+    margin-left:25px;
+    margin-right: 25px;
+}
+.divPice,.divIgra{
+    display: none;
+}
+.dPica:hover + .divPice,.divPice:hover,.dIgra:hover + .divIgra,.divIgra:hover{
+    display: block;
+}
+.dPica{
+    background-image:url('/Icos/cocktail.png');
+    background-size:45px,45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60%;
+    height: 50px;
+}
+.dIgra{
+    background-image:url('/Icos/cards.png');
+    background-size:45px,45px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:60%;
+    height: 50px;
+}
+.redIgraPice{
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+
+
+/*promenjeno*/
+.stub{
+    background-color: rgb(0, 167, 153);  
+}
+.divNaslov{    
+    background-color:rgb(233, 233, 233);    
+}
+/*promenjeno*/
