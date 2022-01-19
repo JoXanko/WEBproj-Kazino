@@ -20,7 +20,7 @@ table{
 .hRadnici{
     align-self: center;
 }
-.hRadnik{
+.hGosti{
     align-self: center ;
     margin-top: 15px ; 
 }
@@ -170,7 +170,7 @@ table,td,.divNaslov{
 .GlavniKontejner{    
     background-color: rgb(31, 35, 36);
 }
-table,td,.hKazina,h4,.labela,h3,.divNaslov,select,.naziv,.drzava,.grad,.godinaOsnivanja,.cipovi,label,input{    
+table,td,.hKazina,h4,.labela,h3,.divNaslov,select,.naziv,.drzava,.grad,.godinaOsnivanja,.cipovi,label,input,.hRadnici,.hGosti{    
     color:rgb(226, 226, 226);
 }
 select,input{

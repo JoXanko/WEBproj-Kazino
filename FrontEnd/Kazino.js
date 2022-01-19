@@ -178,7 +178,7 @@ export class Kazino {
 
         //za tabelu osoba
         labelaRadnik = document.createElement("h5");
-        labelaRadnik.className = "hRadnik";
+        labelaRadnik.className = "hGosti";
         labelaRadnik.innerHTML = "Gosti kazina";
         prikazTabela.appendChild(labelaRadnik);
 
