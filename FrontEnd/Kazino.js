@@ -756,9 +756,6 @@ export class Kazino {
             stubici.innerHTML = "";
             this.popuniListuOsoba();
 
-            if (host.querySelector("input:checked") == null) {
-                alert("Nijedan checkbox za graf nije oznacen!");
-            }
             const buttons = host.querySelector("input:checked").value;
             var max = 0;
 
