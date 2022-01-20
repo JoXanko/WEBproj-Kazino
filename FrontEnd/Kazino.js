@@ -22,14 +22,14 @@ export class Kazino {
     }
 
     crtajKontroluKazina(host) {
-        let divNaslov = document.createElement("div");
-        divNaslov.className = "divNaslov";
-        host.appendChild(divNaslov);
+        let glavnaKontrola = document.createElement("div");
+        glavnaKontrola.className = "glavnaKontrola";
+        host.appendChild(glavnaKontrola);
 
         //naziv
         let divRedNaziv = document.createElement("div");
         divRedNaziv.className = "divRedNaziv";
-        divNaslov.appendChild(divRedNaziv);
+        glavnaKontrola.appendChild(divRedNaziv);
 
         let labNazivConst = document.createElement("label");
         labNazivConst.className = "labNazivConst";
@@ -53,7 +53,7 @@ export class Kazino {
         //drzava
         let divRedDrzava = document.createElement("div");
         divRedDrzava.className = "divRedDrzava";
-        divNaslov.appendChild(divRedDrzava);
+        glavnaKontrola.appendChild(divRedDrzava);
 
         let labDrzavaConst = document.createElement("label");
         labDrzavaConst.className = "labDrzavaConst";
@@ -77,7 +77,7 @@ export class Kazino {
         //grad
         let divRedGrad = document.createElement("div");
         divRedGrad.className = "divRedGrad";
-        divNaslov.appendChild(divRedGrad);
+        glavnaKontrola.appendChild(divRedGrad);
 
         let labGradConst = document.createElement("label");
         labGradConst.className = "labGradConst";
@@ -101,7 +101,7 @@ export class Kazino {
         //godina osnivanja
         let divRedGod = document.createElement("div");
         divRedGod.className = "divRedGod";
-        divNaslov.appendChild(divRedGod);
+        glavnaKontrola.appendChild(divRedGod);
 
         let labGodConst = document.createElement("label");
         labGodConst.className = "labGodConst";
@@ -126,20 +126,20 @@ export class Kazino {
         dugmeIzmeni.innerHTML = "Izmeni";
         dugmeIzmeni.className = "btn btn-outline-secondary dugme";
         dugmeIzmeni.style.display = "block";
-        divNaslov.appendChild(dugmeIzmeni);
+        glavnaKontrola.appendChild(dugmeIzmeni);
 
         let dugmeSacuvaj = document.createElement("button");
         dugmeSacuvaj.innerHTML = "Sacuvaj";
         dugmeSacuvaj.className = "btn btn-outline-success dugme";
         dugmeSacuvaj.style.display = "none";
-        divNaslov.appendChild(dugmeSacuvaj);
+        glavnaKontrola.appendChild(dugmeSacuvaj);
 
         let dugmeOtkazi = document.createElement("button");
         dugmeOtkazi.innerHTML = "Otkazi";
 
         dugmeOtkazi.className = "btn btn-outline-secondary dugme";
         dugmeOtkazi.style.display = "none";
-        divNaslov.appendChild(dugmeOtkazi);
+        glavnaKontrola.appendChild(dugmeOtkazi);
 
 
         let prikazTabela = document.createElement("div");
@@ -153,19 +153,19 @@ export class Kazino {
         prikazTabela.appendChild(labelaRadnik);
 
 
-        var tabela1 = document.createElement("table");
-        tabela1.className = "tabela1 table-striped";
-        prikazTabela.appendChild(tabela1);
+        var tabelaRadnici = document.createElement("table");
+        tabelaRadnici.className = "tabelaRadnici table-striped";
+        prikazTabela.appendChild(tabelaRadnici);
 
         var tabelahead1 = document.createElement("thead");
-        tabela1.appendChild(tabelahead1);
+        tabelaRadnici.appendChild(tabelahead1);
 
         var tr1 = document.createElement("tr");
         tabelahead1.appendChild(tr1);
 
         var tabelaBody1 = document.createElement("tbody");
-        tabelaBody1.className = "TabelaPodaci1";
-        tabela1.appendChild(tabelaBody1);
+        tabelaBody1.className = "tabelaRadnika";
+        tabelaRadnici.appendChild(tabelaBody1);
 
         let th1;
         var zag1 = ["JMBG", "Ime", "Prezime", "Pol", "Godine", "Godine rada", "Plata u EUR"];
@@ -182,19 +182,19 @@ export class Kazino {
         labelaRadnik.innerHTML = "Gosti kazina";
         prikazTabela.appendChild(labelaRadnik);
 
-        var tabela2 = document.createElement("table");
-        tabela2.className = "tabela2 table-striped";
-        prikazTabela.appendChild(tabela2);
+        var tabelaGosti = document.createElement("table");
+        tabelaGosti.className = "tabelaGosti table-striped";
+        prikazTabela.appendChild(tabelaGosti);
 
         var tabelahead2 = document.createElement("thead");
-        tabela2.appendChild(tabelahead2);
+        tabelaGosti.appendChild(tabelahead2);
 
         var tr2 = document.createElement("tr");
         tabelahead2.appendChild(tr2);
 
         var tabelaBody2 = document.createElement("tbody");
-        tabelaBody2.className = "TabelaPodaci2";
-        tabela2.appendChild(tabelaBody2);
+        tabelaBody2.className = "tabelaOsoba";
+        tabelaGosti.appendChild(tabelaBody2);
 
         let th2;
         var zag2 = ["JMBG", "Ime", "Prezime", "Pol", "Godine", "Trenutno cipova", "Potroseno cipova"];
@@ -219,10 +219,10 @@ export class Kazino {
             dugmeIzmeni.style.display = "none";
             dugmeSacuvaj.style.display = "block";
             dugmeOtkazi.style.display = "block";
-            divNaslov.querySelector(".naziv").value = this.naziv;
-            divNaslov.querySelector(".drzava").value = this.drzava;
-            divNaslov.querySelector(".grad").value = this.grad;
-            divNaslov.querySelector(".godinaOsnivanja").value = this.godinaOsnivanja;
+            glavnaKontrola.querySelector(".naziv").value = this.naziv;
+            glavnaKontrola.querySelector(".drzava").value = this.drzava;
+            glavnaKontrola.querySelector(".grad").value = this.grad;
+            glavnaKontrola.querySelector(".godinaOsnivanja").value = this.godinaOsnivanja;
 
         }
 
@@ -230,66 +230,79 @@ export class Kazino {
         this.popuniListuOsoba();
 
         dugmeSacuvaj.onclick = (ev) => {
-            let naziv = divNaslov.querySelector(".naziv").value;
-            let drzava = divNaslov.querySelector(".drzava").value;
-            let grad = divNaslov.querySelector(".grad").value;
-            let godinaOsnivanja = divNaslov.querySelector(".godinaOsnivanja").value;
+            let naziv = glavnaKontrola.querySelector(".naziv").value;
+            if (naziv.length > 25 || naziv.length == 0)
+                alert("Pogresna vrednost za naziv.");
 
-            //radi
-            fetch("https://localhost:5001/Kazino/PromeniKazino/" + this.id + "/" + naziv + "/" + drzava + "/" + grad + "/" + godinaOsnivanja, {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    "id": this.id,
-                    "naziv": naziv,
-                    "drzava": drzava,
-                    "grad": grad,
-                    "godinaOsnivanja": godinaOsnivanja
+            let drzava = glavnaKontrola.querySelector(".drzava").value;
+            if (drzava.length > 25 || drzava.length == 0)
+                alert("Pogresna vrednost za drzavu.");
+
+            let grad = glavnaKontrola.querySelector(".grad").value;
+            if (grad.length > 25 || grad.length == 0)
+                alert("Pogresna vrednost za grad.");
+
+            let godinaOsnivanja = glavnaKontrola.querySelector(".godinaOsnivanja").value;
+            if (godinaOsnivanja <= 0)
+                alert("Pogresna vrednost za godinu osnivanja.");
+
+            if (!(naziv.length > 25 || naziv.length == 0 || drzava.length > 25 || drzava.length == 0 || grad.length > 25 || grad.length == 0 || godinaOsnivanja <= 0)) {
+                //radi
+                fetch("https://localhost:5001/Kazino/PromeniKazino/" + this.id + "/" + naziv + "/" + drzava + "/" + grad + "/" + godinaOsnivanja, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        "id": this.id,
+                        "naziv": naziv,
+                        "drzava": drzava,
+                        "grad": grad,
+                        "godinaOsnivanja": godinaOsnivanja
+                    })
+                }).then(p => {
+                    if (p.ok) {
+                        console.log("PROSLO");
+                        labNaziv.innerHTML = naziv;
+                        labNaziv.style.display = "block";
+                        labDrzava.innerHTML = drzava;
+                        labDrzava.style.display = "block";
+                        labGrad.innerHTML = grad;
+                        labGrad.style.display = "block";
+                        labGodOsnivanja.innerHTML = godinaOsnivanja;
+                        labGodOsnivanja.style.display = "block";
+
+                        inputNaziv.style.display = "none";
+                        inputDrzava.style.display = "none";
+                        inputGrad.style.display = "none";
+                        inputGodOsnivanja.style.display = "none";
+
+                        dugmeIzmeni.style.display = "block";
+                        dugmeSacuvaj.style.display = "none";
+                        dugmeOtkazi.style.display = "none";
+                    }
+                    else {
+                        console.log("NIJE PROSLO");
+                        labNaziv.innerHTML = this.naziv;
+                        labNaziv.style.display = "block";
+                        labDrzava.innerHTML = this.drzava;
+                        labDrzava.style.display = "block";
+                        labGrad.innerHTML = this.grad;
+                        labGrad.style.display = "block";
+                        labGodOsnivanja.innerHTML = this.godOsnivanja;
+                        labGodOsnivanja.style.display = "block";
+
+                        inputNaziv.style.display = "none";
+                        inputDrzava.style.display = "none";
+                        inputGrad.style.display = "none";
+                        inputGodOsnivanja.style.display = "none";
+
+                        dugmeIzmeni.style.display = "block";
+                        dugmeSacuvaj.style.display = "none";
+                        dugmeOtkazi.style.display = "none";
+                    }
                 })
-            }).then(p => {
-                if (p.ok) {
-                    console.log("PROSLO");
-                    labNaziv.innerHTML = naziv;
-                    labNaziv.style.display = "block";
-                    labDrzava.innerHTML = drzava;
-                    labDrzava.style.display = "block";
-                    labGrad.innerHTML = grad;
-                    labGrad.style.display = "block";
-                    labGodOsnivanja.innerHTML = godinaOsnivanja;
-                    labGodOsnivanja.style.display = "block";
-
-                    inputNaziv.style.display = "none";
-                    inputDrzava.style.display = "none";
-                    inputGrad.style.display = "none";
-                    inputGodOsnivanja.style.display = "none";
-
-                    dugmeIzmeni.style.display = "block";
-                    dugmeSacuvaj.style.display = "none";
-                    dugmeOtkazi.style.display = "none";
-                }
-                else {
-                    console.log("NIJE PROSLO");
-                    labNaziv.innerHTML = this.naziv;
-                    labNaziv.style.display = "block";
-                    labDrzava.innerHTML = this.drzava;
-                    labDrzava.style.display = "block";
-                    labGrad.innerHTML = this.grad;
-                    labGrad.style.display = "block";
-                    labGodOsnivanja.innerHTML = this.godOsnivanja;
-                    labGodOsnivanja.style.display = "block";
-
-                    inputNaziv.style.display = "none";
-                    inputDrzava.style.display = "none";
-                    inputGrad.style.display = "none";
-                    inputGodOsnivanja.style.display = "none";
-
-                    dugmeIzmeni.style.display = "block";
-                    dugmeSacuvaj.style.display = "none";
-                    dugmeOtkazi.style.display = "none";
-                }
-            })
+            }
         }
 
         dugmeOtkazi.onclick = (ev) => {
@@ -317,7 +330,7 @@ export class Kazino {
         dugmeObrisi.innerHTML = "Obrisi";
         dugmeObrisi.className = "btn btn-outline-danger dugme";
         dugmeObrisi.style.display = "block";
-        divNaslov.appendChild(dugmeObrisi);
+        glavnaKontrola.appendChild(dugmeObrisi);
 
         //radi
         dugmeObrisi.onclick = (ev) => {
@@ -325,7 +338,6 @@ export class Kazino {
                 method: "DELETE"
             }).then(p => {
                 if (p.ok) {
-
                     alert("Uspesno ste obrisali Kazino");
                     document.location.reload()
                 }
@@ -334,23 +346,23 @@ export class Kazino {
                 }
             });
         }
-        this.unosPicaIIgara(divNaslov);
-        this.crtajDodavanjeRadnika(divNaslov);
+        this.unosPicaIIgara(glavnaKontrola);
+        this.crtajDodavanjeRadnika(glavnaKontrola);
     }
 
-    
-    crtajDodavanjeRadnika(divNaslov) {
+
+    crtajDodavanjeRadnika(glavnaKontrola) {
         //zaposli radnika
         let dugmeDodajRadnika = document.createElement("button");
         dugmeDodajRadnika.innerHTML = "Zaposli radnika";
         dugmeDodajRadnika.className = "btn btn-outline-info dugme";
         dugmeDodajRadnika.style.display = "block";
-        divNaslov.appendChild(dugmeDodajRadnika);
+        glavnaKontrola.appendChild(dugmeDodajRadnika);
 
         //JMBG
         let divRedJMBG = document.createElement("div");
         divRedJMBG.className = "divRedJMBG";
-        divNaslov.appendChild(divRedJMBG);
+        glavnaKontrola.appendChild(divRedJMBG);
 
         let labJMBGConst = document.createElement("label");
         labJMBGConst.className = "labJMBGConst";
@@ -368,7 +380,7 @@ export class Kazino {
         //Ime
         let divRedIme = document.createElement("div");
         divRedIme.className = "divRedIme";
-        divNaslov.appendChild(divRedIme);
+        glavnaKontrola.appendChild(divRedIme);
 
         let labImeConst = document.createElement("label");
         labImeConst.className = "labImeConst";
@@ -385,7 +397,7 @@ export class Kazino {
         //Prezime
         let divRedPrezime = document.createElement("div");
         divRedPrezime.className = "divRedPrezime";
-        divNaslov.appendChild(divRedPrezime);
+        glavnaKontrola.appendChild(divRedPrezime);
 
         let labPrezimeConst = document.createElement("label");
         labPrezimeConst.className = "labPrezimeConst";
@@ -402,7 +414,7 @@ export class Kazino {
         //Pol
         let divRedPol = document.createElement("div");
         divRedPol.className = "divRedPol";
-        divNaslov.appendChild(divRedPol);
+        glavnaKontrola.appendChild(divRedPol);
 
         let labPolConst = document.createElement("label");
         labPolConst.className = "labPolConst";
@@ -419,7 +431,7 @@ export class Kazino {
         //Godine
         let divRedGodine = document.createElement("div");
         divRedGodine.className = "divRedGodine";
-        divNaslov.appendChild(divRedGodine);
+        glavnaKontrola.appendChild(divRedGodine);
 
         let labGodineConst = document.createElement("label");
         labGodineConst.className = "labGodineConst";
@@ -436,7 +448,7 @@ export class Kazino {
         //Plata
         let divRedPlata = document.createElement("div");
         divRedPlata.className = "divRedPlata";
-        divNaslov.appendChild(divRedPlata);
+        glavnaKontrola.appendChild(divRedPlata);
 
         let labPlataConst = document.createElement("label");
         labPlataConst.className = "labPlataConst";
@@ -471,25 +483,25 @@ export class Kazino {
         dugmeSacuvajRad.innerHTML = "Sacuvaj";
         dugmeSacuvajRad.className = "btn btn-outline-success dugme";
         dugmeSacuvajRad.style.display = "none";
-        divNaslov.appendChild(dugmeSacuvajRad);
+        glavnaKontrola.appendChild(dugmeSacuvajRad);
         dugmeSacuvajRad.onclick = (ev) => {
-            let jmbg = divNaslov.querySelector(".JMBG").value;
+            let jmbg = glavnaKontrola.querySelector(".JMBG").value;
             if (jmbg < 1000000000000 || jmbg > 9999999999999)
                 alert("Niste uneli ispravnu vrednost jmbg-a.");
-            let ime = divNaslov.querySelector(".inputIme").value;
+            let ime = glavnaKontrola.querySelector(".inputIme").value;
             if (ime.length <= 0 || ime.length > 25)
                 alert("Niste uneli ispravnu vrednost za ime.");
-            let prezime = divNaslov.querySelector(".inputPrezime").value;
+            let prezime = glavnaKontrola.querySelector(".inputPrezime").value;
             if (prezime.length <= 0 || prezime.length > 25)
                 alert("Niste uneli ispravnu vrednost za prezime.");
-            let pol = divNaslov.querySelector(".inputPol").value;
+            let pol = glavnaKontrola.querySelector(".inputPol").value;
             if (pol.length <= 0 || pol.length > 8)
                 alert("Niste uneli ispravnu vrednost za pol.");
-            let godine = divNaslov.querySelector(".inputGodine").value;
+            let godine = glavnaKontrola.querySelector(".inputGodine").value;
             if (godine < 18 || godine > 64)
                 alert("Niste uneli ispravnu vrednost za godine.");
-            let plata = divNaslov.querySelector(".inputPlata").value;
-            if (plata <=0)
+            let plata = glavnaKontrola.querySelector(".inputPlata").value;
+            if (plata <= 0)
                 alert("Niste uneli ispravnu vrednost za platu.");
 
 
@@ -527,7 +539,7 @@ export class Kazino {
         dugmeOtkaziRad.innerHTML = "Otkazi";
         dugmeOtkaziRad.className = "btn btn-outline-secondary dugme";
         dugmeOtkaziRad.style.display = "none";
-        divNaslov.appendChild(dugmeOtkaziRad);
+        glavnaKontrola.appendChild(dugmeOtkaziRad);
 
         dugmeOtkaziRad.onclick = (ev) => {
             labJMBGConst.style.display = "none";
@@ -547,11 +559,11 @@ export class Kazino {
         }
 
     }
-    unosPicaIIgara(divNaslov){
+    unosPicaIIgara(glavnaKontrola) {
         //glavni div igara i pica
         let redIgraPice = document.createElement("div");
         redIgraPice.className = "redIgraPice";
-        divNaslov.appendChild(redIgraPice);
+        glavnaKontrola.appendChild(redIgraPice);
 
         //lsita pica        
         var listaPica = [];
@@ -824,22 +836,22 @@ export class Kazino {
                 }
     }
     obrisiPrethodniSadrzaj() {
-        var teloTabele = document.querySelector(".TabelaPodaci1");
+        var teloTabele = document.querySelector(".tabelaRadnika");
         var roditelj = teloTabele.parentNode;
         roditelj.removeChild(teloTabele);
 
         teloTabele = document.createElement("tbody");
-        teloTabele.className = "TabelaPodaci1";
+        teloTabele.className = "tabelaRadnika";
         roditelj.appendChild(teloTabele);
         return teloTabele;
     }
     obrisiPrethodniSadrzaj2() {
-        var teloTabele = document.querySelector(".TabelaPodaci2");
+        var teloTabele = document.querySelector(".tabelaOsoba");
         var roditelj = teloTabele.parentNode;
         roditelj.removeChild(teloTabele);
 
         teloTabele = document.createElement("tbody");
-        teloTabele.className = "TabelaPodaci2";
+        teloTabele.className = "tabelaOsoba";
         roditelj.appendChild(teloTabele);
         return teloTabele;
     }

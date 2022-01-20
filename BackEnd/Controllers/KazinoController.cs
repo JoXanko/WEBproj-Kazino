@@ -70,7 +70,13 @@ namespace WEB_Projekat.Controllers
         public async Task<ActionResult> Promeni(int id, string naziv, string drzava, string grad, int godOsnivanja)
         {
             if (string.IsNullOrWhiteSpace(naziv) || naziv.Length > 25)
-                return BadRequest("Pogrešan naziv kazina!");
+                return BadRequest("Pogrešna vrednost za naziv.!");
+            if (string.IsNullOrWhiteSpace(drzava) || drzava.Length > 25)
+                return BadRequest("Pogrešna vrednost za drzavu.");
+            if (string.IsNullOrWhiteSpace(grad) || grad.Length > 25)
+                return BadRequest("Pogrešna vrednost za grad.");
+            if (godOsnivanja < 0)
+                return BadRequest("Pogrešna vrednost za godinu osnivanja.");
 
             try
             {
