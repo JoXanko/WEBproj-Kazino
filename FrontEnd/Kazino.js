@@ -516,6 +516,9 @@ export class Kazino {
                     if (s.ok) {
                         this.popuniListuRadnika();
                     }
+                    else{
+                        alert("Radnik sa zadatim JMBG-ov vec postoji.");
+                    }
                 })
 
             labJMBGConst.style.display = "none";
