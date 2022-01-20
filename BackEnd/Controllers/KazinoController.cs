@@ -43,13 +43,13 @@ namespace WEB_Projekat.Controllers
         {
             try
             {
-                var studentipopredmetu = Context.Kazino
+                var kazina = Context.Kazino
                     .Where(p => p.ID == KazinoID);
-                var student = await studentipopredmetu.ToListAsync();
+                var kazino = await kazina.ToListAsync();
 
                 return Ok
                 (
-                    student.Select(p =>
+                    kazino.Select(p =>
                     new
                     {
                         ID = p.ID,
